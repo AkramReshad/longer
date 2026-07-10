@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+store/node_modules/
+
+# Next.js
+.next/
+store/.next/
+out/
+
+# Local browser artifacts
+.browser-runtime/
+store/.browser-runtime/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and local tooling
+*.log
+.DS_Store
+*.tsbuildinfo
+
+# Vercel
+.vercel/

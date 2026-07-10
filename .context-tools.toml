@@ -1,0 +1,7 @@
+[browser]
+default_workspace = "longer"
+
+[browser.workspaces.longer]
+root = "/Users/akramreshad/src/longer/store"
+base_url = "http://127.0.0.1:3000"
+device_preset = "desktop"
