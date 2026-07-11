@@ -60,6 +60,14 @@ export function StorefrontPage() {
       </header>
 
       <section className="bold-hero" aria-labelledby="bold-hero-title">
+        <Image
+          className="bold-hero-scene"
+          src="/concepts/longer-hero-wide-v3.png"
+          fill
+          alt="Longer electrolyte powder stick packs arranged beside a white clinical plinth"
+          sizes="100vw"
+          priority
+        />
         <div className="bold-hero-copy">
           <p className="bold-overline"><span>Rx</span> Patient information / Issue 001</p>
           <h1 id="bold-hero-title">Are you suffering from ED?</h1>
@@ -79,14 +87,6 @@ export function StorefrontPage() {
         </div>
 
         <div className="bold-hero-product" aria-label="Longer Blue Pill electrolyte powder">
-          <Image
-            className="bold-hero-scene"
-            src="/concepts/longer-hero-product-v2.png"
-            fill
-            alt="Longer Blue Pill electrolyte powder stick pack on a white clinical stage"
-            sizes="(max-width: 980px) 100vw, 56vw"
-            priority
-          />
           <div className="bold-rx-seal" aria-hidden="true">
             <strong>Rx</strong>
             <span>For oral hydration only</span>
