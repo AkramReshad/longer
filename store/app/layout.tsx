@@ -18,20 +18,29 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env['NEXT_PUBLIC_SITE_URL'] ?? 'http://localhost:3000'),
+  metadataBase: new URL(process.env['NEXT_PUBLIC_SITE_URL'] ?? 'https://itslonger.com'),
   title: 'Longer — Electrolyte Dysfunction',
   description: 'A serious electrolyte powder for moments when performance matters.',
   openGraph: {
     title: 'Longer — Electrolyte Dysfunction',
     description: 'A serious electrolyte powder for moments when performance matters.',
     type: 'website',
-    images: ['/concepts/clinical-reference-longer-candidate.png']
+    url: '/',
+    siteName: 'Longer',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Longer — Electrolyte Dysfunction'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Longer — Electrolyte Dysfunction',
     description: 'A serious electrolyte powder for moments when performance matters.',
-    images: ['/concepts/clinical-reference-longer-candidate.png']
+    images: ['/opengraph-image']
   }
 };
 
