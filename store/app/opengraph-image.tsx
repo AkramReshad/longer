@@ -27,7 +27,7 @@ export default function OpenGraphImage() {
           borderTop: '12px solid #0057b8'
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', transform: 'translateX(-55px)' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={`data:image/svg+xml;base64,${encodedLockup}`}
