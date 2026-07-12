@@ -22,6 +22,8 @@
 .bold-header > a:last-child span { margin-left: 18px; font-family: var(--font-sans); font-size: 1.35rem; }
 .bold-wordmark { display: inline-flex; align-items: center; gap: 9px; color: var(--bold-blue); }
 .bold-wordmark > img { width: 24px; height: 35px; object-fit: contain; }
+.bold-header .bold-wordmark > img,
+.bold-footer .bold-wordmark > img { width: 32px; height: 48px; margin: 0 4px 0 12px; transform: scale(1.75); transform-origin: center; }
 .bold-wordmark > span { display: grid; }
 .bold-wordmark strong { font-family: var(--font-serif); font-size: 2rem; font-weight: 400; line-height: .78; }
 .bold-wordmark small { margin-top: 7px; font-size: .5rem; font-weight: 800; letter-spacing: .04em; }
@@ -33,9 +35,9 @@
 .bold-hero-copy { position: relative; z-index: 2; display: grid; align-content: center; padding: 80px clamp(36px,6.4vw,112px) 96px; }
 .bold-overline { display: flex; align-items: center; gap: 13px; margin: 0 0 26px; color: var(--bold-blue); font-size: .78rem; font-weight: 780; letter-spacing: .04em; text-transform: uppercase; }
 .bold-overline span { font-family: var(--font-serif); font-size: 2.4rem; font-weight: 400; letter-spacing: 0; text-transform: none; }
-.bold-hero h1 { max-width: 780px; margin: 0; color: var(--bold-blue-deep); font-family: var(--font-serif); font-size: clamp(5.7rem,8.2vw,10rem); font-weight: 400; line-height: .82; letter-spacing: -.055em; text-wrap: balance; }
+.bold-hero h1 { max-width: 780px; margin: 0; color: var(--bold-blue-deep); font-family: var(--font-serif); font-size: clamp(5.7rem,8.2vw,10rem); font-weight: 400; line-height: .94; letter-spacing: -.055em; text-wrap: balance; }
 .bold-hero-diagnosis { margin: 24px 0 18px; color: var(--bold-blue); font-family: var(--font-serif); font-size: clamp(2rem,3vw,3.7rem); font-style: italic; line-height: 1; }
-.bold-hero-body { max-width: 620px; margin: 0; color: rgba(2,31,74,.74); font-size: clamp(1rem,1.35vw,1.2rem); line-height: 1.55; }
+.bold-hero-body { max-width: 620px; margin: 38px 0 0; color: rgba(2,31,74,.74); font-size: clamp(1rem,1.35vw,1.2rem); line-height: 1.55; }
 .bold-hero-actions { display: flex; align-items: center; gap: 22px; margin-top: 34px; }
 .bold-hero-actions a:first-child { display: inline-flex; min-height: 62px; align-items: center; background: var(--bold-blue); color: #fff; padding: 0 25px; font-size: .82rem; font-weight: 800; text-transform: uppercase; transition: background 180ms ease,transform 180ms ease; }
 .bold-hero-actions a:first-child:hover { background: var(--bold-blue-deep); transform: translateY(-2px); }
@@ -76,8 +78,9 @@
 .bold-blue-pill::before { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.06) 1px,transparent 1px); background-size: 82px 82px; }
 .bold-blue-copy { position: relative; z-index: 2; align-self: center; padding: 100px 30px 100px clamp(34px,7vw,112px); }
 .bold-blue-copy > p:first-child { margin: 0 0 18px; font-size: .73rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
-.bold-blue-copy h2 { margin: 0; font-family: var(--font-serif); font-size: clamp(8rem,14vw,17rem); font-weight: 400; line-height: .65; letter-spacing: -.07em; }
-.bold-blue-lede { margin: 38px 0 50px; font-family: var(--font-serif); font-size: clamp(1.8rem,2.8vw,3.2rem); font-style: italic; }
+.bold-blue-copy h2 { margin: 0; font-family: var(--font-serif); font-size: clamp(8rem,14vw,17rem); font-weight: 400; line-height: .8; letter-spacing: -.07em; }
+.bold-blue-lede { margin: 38px 0 10px; font-family: var(--font-serif); font-size: clamp(1.8rem,2.8vw,3.2rem); font-style: italic; }
+.bold-blue-support { margin: 0 0 50px; color: rgba(255,255,255,.72); font-family: var(--font-serif); font-size: clamp(1rem,1.35vw,1.35rem); font-style: italic; }
 .bold-blue-copy dl { display: grid; max-width: 560px; margin: 0; border-top: 1px solid rgba(255,255,255,.5); }
 .bold-blue-copy dl div { display: grid; grid-template-columns: 110px 1fr; gap: 20px; border-bottom: 1px solid rgba(255,255,255,.5); padding: 13px 0; }
 .bold-blue-copy dt { color: rgba(255,255,255,.58); font-size: .65rem; text-transform: uppercase; }
@@ -115,14 +118,13 @@
 .bold-options > header { display: grid; width: min(1320px,100%); grid-template-columns: .36fr 1.15fr; align-items: end; gap: 40px; margin: 0 auto 70px; }
 .bold-options > header p { margin: 0; color: var(--bold-blue); font-size: .68rem; font-weight: 800; text-transform: uppercase; }
 .bold-options > header h2 { margin: 0; color: var(--bold-blue-deep); font-family: var(--font-serif); font-size: clamp(4.7rem,7.6vw,9rem); font-weight: 400; line-height: .84; letter-spacing: -.04em; }
-.bold-treatment-list { display: grid; width: min(1320px,100%); grid-template-columns: 1.18fr .91fr .91fr; margin: 0 auto; border-top: 1px solid var(--bold-line); border-left: 1px solid var(--bold-line); }
+.bold-treatment-list { display: grid; width: min(1320px,100%); grid-template-columns: repeat(3,minmax(0,1fr)); margin: 0 auto; border-top: 1px solid var(--bold-line); border-left: 1px solid var(--bold-line); }
 .bold-treatment-list article { position: relative; display: grid; min-height: 620px; align-content: end; overflow: hidden; border-right: 1px solid var(--bold-line); border-bottom: 1px solid var(--bold-line); padding: 28px; }
 .bold-treatment-primary { box-shadow: inset 0 8px 0 var(--bold-blue); }
 .bold-treatment-meta { position: absolute; top: 25px; left: 28px; right: 28px; display: flex; justify-content: space-between; color: var(--bold-blue); font-size: .6rem; font-weight: 800; text-transform: uppercase; }
-.bold-treatment-list img { position: absolute; top: 12%; left: 50%; width: 88%; height: 48%; object-fit: contain; mix-blend-mode: multiply; transform: translateX(-50%); transition: transform 500ms ease; }
-.bold-treatment-list article:hover img { transform: translateX(-50%) scale(1.08) rotate(-3deg); }
-.bold-treatment-list h3 { margin: 0; color: var(--bold-blue); font-family: var(--font-serif); font-size: clamp(3rem,5vw,6rem); font-weight: 400; line-height: .8; }
-.bold-treatment-list p { margin: 16px 0 24px; font-family: var(--font-serif); font-size: 1.35rem; font-style: italic; }
+.bold-treatment-list img { position: absolute; top: 9%; left: 6%; width: 88%; height: 52%; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 18px 14px rgba(0,44,107,.12)); }
+.bold-treatment-list article:nth-child(3) img { transform: scale(1.28); transform-origin: center bottom; }
+.bold-treatment-list h3 { margin: 0 0 24px; color: var(--bold-blue); font-family: var(--font-serif); font-size: clamp(3rem,3.8vw,4.2rem); font-weight: 400; line-height: .86; white-space: nowrap; }
 .bold-treatment-list small { border-top: 1px solid var(--bold-line); padding-top: 15px; color: rgba(0,44,107,.56); font-size: .65rem; font-weight: 800; }
 
 .bold-insert { display: grid; grid-template-columns: 86px 1fr minmax(250px,.28fr); background: #f4f1e8; border-top: 1px solid #111; border-bottom: 1px solid #111; }
@@ -146,7 +148,7 @@
 .bold-quote cite { font-family: var(--font-serif); font-style: italic; }
 
 .bold-enrollment { display: grid; min-height: 94dvh; grid-template-columns: minmax(500px,1.15fr) minmax(380px,.55fr); align-items: center; gap: clamp(60px,9vw,150px); background: var(--bold-blue); color: #fff; padding: 100px clamp(24px,7vw,110px); }
-.bold-enrollment-copy > p { margin: 70px 0 18px; color: rgba(255,255,255,.68); font-size: .7rem; font-weight: 800; text-transform: uppercase; }
+.bold-enrollment-copy > p { margin: 0 0 18px; color: rgba(255,255,255,.68); font-size: .7rem; font-weight: 800; text-transform: uppercase; }
 .bold-enrollment-copy h2 { max-width: 900px; margin: 0; font-family: var(--font-serif); font-size: clamp(6rem,10vw,13rem); font-weight: 400; line-height: .78; letter-spacing: -.06em; }
 .bold-enrollment-copy > span { display: block; max-width: 600px; margin-top: 36px; color: rgba(255,255,255,.67); line-height: 1.5; }
 .bold-enrollment .waitlist-form { gap: 15px; border: 1px solid rgba(255,255,255,.45); border-radius: 0; background: #fff; color: var(--bold-blue-deep); box-shadow: 28px 34px 0 var(--bold-blue-deep); padding: 24px; }
@@ -187,6 +189,7 @@
   .bold-header { min-height: 70px; padding: 10px 15px; }
   .bold-header .bold-wordmark strong { font-size: 1.55rem; }
   .bold-header .bold-wordmark small { display: none; }
+  .bold-header .bold-wordmark > img { width: 24px; height: 35px; margin: 0 2px 0 6px; transform: scale(1.35); }
   .bold-header > a:last-child { max-width: 150px; font-size: .67rem; text-align: right; }
   .bold-header > a:last-child span { margin-left: 6px; }
   .bold-hero { padding-top: 70px; }
