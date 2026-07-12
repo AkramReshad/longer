@@ -20,13 +20,9 @@
 .bold-header > p { margin: 0; color: var(--bold-blue-deep); font-family: var(--font-serif); font-size: .92rem; }
 .bold-header > a:last-child { justify-self: end; color: var(--bold-blue); font-family: var(--font-serif); font-size: .95rem; text-transform: uppercase; }
 .bold-header > a:last-child span { margin-left: 18px; font-family: var(--font-sans); font-size: 1.35rem; }
-.bold-wordmark { display: inline-flex; align-items: center; gap: 9px; color: var(--bold-blue); }
-.bold-wordmark > img { width: 24px; height: 35px; object-fit: contain; }
-.bold-header .bold-wordmark > img,
-.bold-footer .bold-wordmark > img { width: 32px; height: 48px; margin: 0 4px 0 12px; transform: scale(1.75); transform-origin: center; }
-.bold-wordmark > span { display: grid; }
-.bold-wordmark strong { font-family: var(--font-serif); font-size: 2rem; font-weight: 400; line-height: .78; }
-.bold-wordmark small { margin-top: 7px; font-size: .5rem; font-weight: 800; letter-spacing: .04em; }
+.bold-wordmark { display: inline-flex; align-items: center; }
+.bold-wordmark > img { display: block; width: 250px; height: auto; object-fit: contain; }
+.bold-footer .bold-wordmark > img { width: 225px; }
 .bold-wordmark-inverse { color: #fff; }
 .bold-wordmark-inverse > img { filter: brightness(0) invert(1); }
 
@@ -187,9 +183,7 @@
 
 @media (max-width: 650px) {
   .bold-header { min-height: 70px; padding: 10px 15px; }
-  .bold-header .bold-wordmark strong { font-size: 1.55rem; }
-  .bold-header .bold-wordmark small { display: none; }
-  .bold-header .bold-wordmark > img { width: 24px; height: 35px; margin: 0 2px 0 6px; transform: scale(1.35); }
+  .bold-header .bold-wordmark > img { width: 190px; }
   .bold-header > a:last-child { max-width: 150px; font-size: .67rem; text-align: right; }
   .bold-header > a:last-child span { margin-left: 6px; }
   .bold-hero { padding-top: 70px; }

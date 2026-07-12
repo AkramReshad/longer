@@ -11,11 +11,7 @@ const symptoms = [
 function Wordmark({ inverse = false }: { readonly inverse?: boolean }) {
   return (
     <span className={`bold-wordmark${inverse ? ' bold-wordmark-inverse' : ''}`} aria-label="Longer — Electrolyte Dysfunction">
-      <Image src="/longer-mark-pantone-2935c-transparent.png" width={27} height={40} alt="" priority />
-      <span>
-        <strong>LONGER</strong>
-        <small>ELECTROLYTE DYSFUNCTION</small>
-      </span>
+      <Image src="/logos/longer-horizontal-lockup.svg?v=2" width={1000} height={244} alt="" priority />
     </span>
   );
 }

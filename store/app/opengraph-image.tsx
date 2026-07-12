@@ -11,7 +11,8 @@ export const size = {
 export const contentType = 'image/png';
 
 export default function OpenGraphImage() {
-  const mark = readFileSync(join(process.cwd(), 'app/icon.png')).toString('base64');
+  const lockup = readFileSync(join(process.cwd(), 'public/logos/longer-horizontal-lockup.svg'), 'utf8');
+  const encodedLockup = Buffer.from(lockup).toString('base64');
 
   return new ImageResponse(
     (
@@ -26,41 +27,20 @@ export default function OpenGraphImage() {
           borderTop: '12px solid #0057b8'
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 34 }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`data:image/png;base64,${mark}`}
-            width={116}
-            height={184}
-            alt=""
+            src={`data:image/svg+xml;base64,${encodedLockup}`}
+            width={1000}
+            height={244}
+            alt="Longer — Electrolyte Dysfunction"
             style={{ objectFit: 'contain' }}
           />
-          <div style={{ display: 'flex', flexDirection: 'column', color: '#0057b8' }}>
-            <div
-              style={{
-                fontFamily: 'Georgia, Times New Roman, serif',
-                fontSize: 126,
-                lineHeight: 0.9,
-                letterSpacing: -5
-              }}
-            >
-              LONGER
-            </div>
-            <div
-              style={{
-                marginTop: 28,
-                fontFamily: 'Arial, Helvetica, sans-serif',
-                fontSize: 31,
-                fontWeight: 700,
-                letterSpacing: 1.5
-              }}
-            >
-              ELECTROLYTE DYSFUNCTION
-            </div>
-          </div>
         </div>
       </div>
     ),
-    size
+    {
+      ...size
+    }
   );
 }
