@@ -31,7 +31,7 @@ export default function OpenGraphImage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={`data:image/svg+xml;base64,${encodedLockup}`}
-            width={1000}
+            width={900}
             height={244}
             alt="Longer — Electrolyte Dysfunction"
             style={{ objectFit: 'contain' }}
