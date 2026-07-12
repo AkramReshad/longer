@@ -27,12 +27,12 @@ export default function OpenGraphImage() {
           borderTop: '12px solid #0057b8'
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', transform: 'translateX(-55px)' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={`data:image/svg+xml;base64,${encodedLockup}`}
-            width={900}
-            height={244}
+            width={1000}
+            height={226}
             alt="Longer — Electrolyte Dysfunction"
             style={{ objectFit: 'contain' }}
           />

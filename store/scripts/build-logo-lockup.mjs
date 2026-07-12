@@ -5,7 +5,7 @@ const root = process.cwd();
 const icon = readFileSync(join(root, 'app/icon.png')).toString('base64');
 const font = readFileSync(join(root, 'public/logos/instrument-serif.ttf')).toString('base64');
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="244" viewBox="0 0 1000 244" role="img" aria-labelledby="title description">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="244" viewBox="0 0 1080 244" role="img" aria-labelledby="title description">
   <title id="title">Longer</title>
   <desc id="description">Longer — Electrolyte Dysfunction</desc>
   <defs>
