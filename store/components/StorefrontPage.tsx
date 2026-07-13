@@ -140,7 +140,7 @@ export function StorefrontPage() {
         </div>
         <div className="bold-study-data">
           <div><strong>3/4</strong><span>Americans suffer from Electrolyte Dysfunction</span></div>
-          <div><strong>5/4</strong><span>Of women agree that finishing matters</span></div>
+          <div><strong>5/4</strong><span>Women agree that finishing matters</span></div>
           <div><strong>01</strong><span>Packet administered before the relationship deteriorated</span></div>
         </div>
       </section>
