@@ -1,0 +1,33 @@
+{
+  "type": "list",
+  "id": "RH9PSK",
+  "attributes": {
+    "name": "Longer Clinical Enrollment — Prelaunch",
+    "created": "2026-07-14T03:38:09+00:00",
+    "updated": "2026-07-14T03:38:09+00:00",
+    "opt_in_process": "single_opt_in"
+  },
+  "relationships": {
+    "profiles": {
+      "links": {
+        "self": "https://a.klaviyo.com/api/lists/RH9PSK/relationships/profiles/",
+        "related": "https://a.klaviyo.com/api/lists/RH9PSK/profiles/"
+      }
+    },
+    "tags": {
+      "links": {
+        "self": "https://a.klaviyo.com/api/lists/RH9PSK/relationships/tags/",
+        "related": "https://a.klaviyo.com/api/lists/RH9PSK/tags/"
+      }
+    },
+    "flow-triggers": {
+      "links": {
+        "self": "https://a.klaviyo.com/api/lists/RH9PSK/relationships/flow-triggers/",
+        "related": "https://a.klaviyo.com/api/lists/RH9PSK/flow-triggers/"
+      }
+    }
+  },
+  "links": {
+    "self": "https://a.klaviyo.com/api/lists/RH9PSK/"
+  }
+}

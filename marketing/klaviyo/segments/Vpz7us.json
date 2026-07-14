@@ -1,0 +1,91 @@
+{
+    "type": "segment",
+    "id": "Vpz7us",
+    "attributes": {
+        "name": "Win-Back Opportunities (Shopify)",
+        "definition": {
+            "condition_groups": [
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "XTDhWW",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "greater-than",
+                                "value": 0
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "alltime"
+                            },
+                            "metric_filters": null
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "XTDhWW",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "equals",
+                                "value": 0
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "in-the-last",
+                                "unit": "day",
+                                "quantity": 180
+                            },
+                            "metric_filters": null
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-marketing-consent",
+                            "consent": {
+                                "channel": "email",
+                                "can_receive_marketing": true,
+                                "consent_status": {
+                                    "subscription": "any",
+                                    "filters": null
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "created": "2026-07-14T02:45:37+00:00",
+        "is_starred": false
+    },
+    "relationships": {
+        "profiles": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/Vpz7us/relationships/profiles/",
+                "related": "https://a.klaviyo.com/api/segments/Vpz7us/profiles/"
+            }
+        },
+        "tags": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/Vpz7us/relationships/tags/",
+                "related": "https://a.klaviyo.com/api/segments/Vpz7us/tags/"
+            }
+        },
+        "flow-triggers": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/Vpz7us/relationships/flow-triggers/",
+                "related": "https://a.klaviyo.com/api/segments/Vpz7us/flow-triggers/"
+            }
+        }
+    },
+    "links": {
+        "self": "https://a.klaviyo.com/api/segments/Vpz7us/"
+    }
+}

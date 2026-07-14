@@ -1,0 +1,99 @@
+{
+    "type": "segment",
+    "id": "QWpLR3",
+    "attributes": {
+        "name": "Engaged (60 Days)",
+        "definition": {
+            "condition_groups": [
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-group-membership",
+                            "is_member": true,
+                            "group_ids": [
+                                "R333cr"
+                            ],
+                            "timeframe_filter": null
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "RbGhQR",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "greater-than",
+                                "value": 0
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "in-the-last",
+                                "unit": "day",
+                                "quantity": 60
+                            },
+                            "metric_filters": null
+                        },
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "Ys36eb",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "greater-than",
+                                "value": 0
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "in-the-last",
+                                "unit": "day",
+                                "quantity": 60
+                            },
+                            "metric_filters": null
+                        },
+                        {
+                            "type": "profile-group-membership",
+                            "is_member": true,
+                            "group_ids": [
+                                "R333cr"
+                            ],
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "in-the-last",
+                                "unit": "day",
+                                "quantity": 30
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "created": "2026-07-14T02:46:17+00:00",
+        "is_starred": false
+    },
+    "relationships": {
+        "profiles": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/QWpLR3/relationships/profiles/",
+                "related": "https://a.klaviyo.com/api/segments/QWpLR3/profiles/"
+            }
+        },
+        "tags": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/QWpLR3/relationships/tags/",
+                "related": "https://a.klaviyo.com/api/segments/QWpLR3/tags/"
+            }
+        },
+        "flow-triggers": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/QWpLR3/relationships/flow-triggers/",
+                "related": "https://a.klaviyo.com/api/segments/QWpLR3/flow-triggers/"
+            }
+        }
+    },
+    "links": {
+        "self": "https://a.klaviyo.com/api/segments/QWpLR3/"
+    }
+}

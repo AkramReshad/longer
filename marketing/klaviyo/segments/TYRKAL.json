@@ -1,0 +1,68 @@
+{
+    "type": "segment",
+    "id": "TYRKAL",
+    "attributes": {
+        "name": "New Subscribers",
+        "definition": {
+            "condition_groups": [
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-group-membership",
+                            "is_member": true,
+                            "group_ids": [
+                                "R333cr"
+                            ],
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "in-the-last",
+                                "unit": "day",
+                                "quantity": 14
+                            }
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-marketing-consent",
+                            "consent": {
+                                "channel": "email",
+                                "can_receive_marketing": true,
+                                "consent_status": {
+                                    "subscription": "any",
+                                    "filters": null
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "created": "2026-07-14T02:46:16+00:00",
+        "is_starred": false
+    },
+    "relationships": {
+        "profiles": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/TYRKAL/relationships/profiles/",
+                "related": "https://a.klaviyo.com/api/segments/TYRKAL/profiles/"
+            }
+        },
+        "tags": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/TYRKAL/relationships/tags/",
+                "related": "https://a.klaviyo.com/api/segments/TYRKAL/tags/"
+            }
+        },
+        "flow-triggers": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/TYRKAL/relationships/flow-triggers/",
+                "related": "https://a.klaviyo.com/api/segments/TYRKAL/flow-triggers/"
+            }
+        }
+    },
+    "links": {
+        "self": "https://a.klaviyo.com/api/segments/TYRKAL/"
+    }
+}

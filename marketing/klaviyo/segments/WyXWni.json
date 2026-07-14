@@ -1,0 +1,133 @@
+{
+    "type": "segment",
+    "id": "WyXWni",
+    "attributes": {
+        "name": "Churn Risks (Shopify)",
+        "definition": {
+            "condition_groups": [
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "XTDhWW",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "greater-than",
+                                "value": 0
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "alltime"
+                            },
+                            "metric_filters": null
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "XTDhWW",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "equals",
+                                "value": 0
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "in-the-last",
+                                "unit": "day",
+                                "quantity": 180
+                            },
+                            "metric_filters": null
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "ULy4RP",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "greater-than-or-equal",
+                                "value": 2
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "in-the-last",
+                                "unit": "day",
+                                "quantity": 90
+                            },
+                            "metric_filters": null
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "RbGhQR",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "equals",
+                                "value": 0
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "in-the-last",
+                                "unit": "day",
+                                "quantity": 90
+                            },
+                            "metric_filters": null
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-marketing-consent",
+                            "consent": {
+                                "channel": "email",
+                                "can_receive_marketing": true,
+                                "consent_status": {
+                                    "subscription": "any",
+                                    "filters": null
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "created": "2026-07-14T02:45:38+00:00",
+        "is_starred": false
+    },
+    "relationships": {
+        "profiles": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/WyXWni/relationships/profiles/",
+                "related": "https://a.klaviyo.com/api/segments/WyXWni/profiles/"
+            }
+        },
+        "tags": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/WyXWni/relationships/tags/",
+                "related": "https://a.klaviyo.com/api/segments/WyXWni/tags/"
+            }
+        },
+        "flow-triggers": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/WyXWni/relationships/flow-triggers/",
+                "related": "https://a.klaviyo.com/api/segments/WyXWni/flow-triggers/"
+            }
+        }
+    },
+    "links": {
+        "self": "https://a.klaviyo.com/api/segments/WyXWni/"
+    }
+}

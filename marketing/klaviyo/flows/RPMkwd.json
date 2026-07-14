@@ -1,0 +1,111 @@
+{
+    "type": "flow",
+    "id": "RPMkwd",
+    "attributes": {
+        "name": "Essential Flow Recommendation_",
+        "status": "draft",
+        "archived": false,
+        "created": "2026-07-14T02:56:05+00:00",
+        "trigger_type": "Unconfigured",
+        "definition": {
+            "triggers": [],
+            "profile_filter": null,
+            "actions": [
+                {
+                    "id": "111761361",
+                    "type": "send-email",
+                    "data": {
+                        "message": {
+                            "from_email": "akramreshad@gmail.com",
+                            "from_label": "Longer Inc",
+                            "reply_to_email": "akramreshad@gmail.com",
+                            "cc_email": null,
+                            "bcc_email": null,
+                            "subject_line": "Welcome to Longer!",
+                            "preview_text": "Discover the power of hydration.",
+                            "template_id": "QQegmv",
+                            "smart_sending_enabled": true,
+                            "transactional": false,
+                            "add_tracking_params": true,
+                            "custom_tracking_params": null,
+                            "additional_filters": null,
+                            "name": "Welcome Series - Email - No Coupon",
+                            "id": "VqD7xb"
+                        },
+                        "status": "draft"
+                    },
+                    "links": {
+                        "next": "111761362"
+                    }
+                },
+                {
+                    "id": "111761362",
+                    "type": "time-delay",
+                    "data": {
+                        "unit": "days",
+                        "value": 3,
+                        "secondary_value": null,
+                        "timezone": "profile",
+                        "delay_until_weekdays": [
+                            "monday",
+                            "tuesday",
+                            "wednesday",
+                            "thursday",
+                            "friday",
+                            "saturday",
+                            "sunday"
+                        ]
+                    },
+                    "links": {
+                        "next": "111761363"
+                    }
+                },
+                {
+                    "id": "111761363",
+                    "type": "send-email",
+                    "data": {
+                        "message": {
+                            "from_email": "akramreshad@gmail.com",
+                            "from_label": "Longer Inc",
+                            "reply_to_email": "akramreshad@gmail.com",
+                            "cc_email": null,
+                            "bcc_email": null,
+                            "subject_line": "Join Us on Social!",
+                            "preview_text": "Connect with Longer on social channels.",
+                            "template_id": "SCE9RY",
+                            "smart_sending_enabled": true,
+                            "transactional": false,
+                            "add_tracking_params": true,
+                            "custom_tracking_params": null,
+                            "additional_filters": null,
+                            "name": "Welcome Series - Email - Social Media",
+                            "id": "WA3Wr3"
+                        },
+                        "status": "draft"
+                    },
+                    "links": {
+                        "next": null
+                    }
+                }
+            ],
+            "entry_action_id": "111761361"
+        }
+    },
+    "relationships": {
+        "flow-actions": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/flows/RPMkwd/relationships/flow-actions/",
+                "related": "https://a.klaviyo.com/api/flows/RPMkwd/flow-actions/"
+            }
+        },
+        "tags": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/flows/RPMkwd/relationships/tags/",
+                "related": "https://a.klaviyo.com/api/flows/RPMkwd/tags/"
+            }
+        }
+    },
+    "links": {
+        "self": "https://a.klaviyo.com/api/flows/RPMkwd/"
+    }
+}

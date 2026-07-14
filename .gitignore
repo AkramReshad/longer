@@ -15,6 +15,7 @@ store/.browser-runtime/
 .env
 .env.*
 !.env.example
+marketing/.venv/
 
 # Logs and local tooling
 *.log

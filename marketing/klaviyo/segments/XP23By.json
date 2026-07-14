@@ -1,0 +1,70 @@
+{
+    "type": "segment",
+    "id": "XP23By",
+    "attributes": {
+        "name": "Repeat Buyers (Shopify)",
+        "definition": {
+            "condition_groups": [
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "XTDhWW",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "greater-than",
+                                "value": 1
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "alltime"
+                            },
+                            "metric_filters": null
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-marketing-consent",
+                            "consent": {
+                                "channel": "email",
+                                "can_receive_marketing": true,
+                                "consent_status": {
+                                    "subscription": "any",
+                                    "filters": null
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "created": "2026-07-14T02:45:37+00:00",
+        "is_starred": false
+    },
+    "relationships": {
+        "profiles": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/XP23By/relationships/profiles/",
+                "related": "https://a.klaviyo.com/api/segments/XP23By/profiles/"
+            }
+        },
+        "tags": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/XP23By/relationships/tags/",
+                "related": "https://a.klaviyo.com/api/segments/XP23By/tags/"
+            }
+        },
+        "flow-triggers": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/XP23By/relationships/flow-triggers/",
+                "related": "https://a.klaviyo.com/api/segments/XP23By/flow-triggers/"
+            }
+        }
+    },
+    "links": {
+        "self": "https://a.klaviyo.com/api/segments/XP23By/"
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "type": "segment",
+    "id": "T4KrGJ",
+    "attributes": {
+        "name": "VIP Customers (Shopify)",
+        "definition": {
+            "condition_groups": [
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "XTDhWW",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "greater-than",
+                                "value": 5
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "alltime"
+                            },
+                            "metric_filters": null
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-marketing-consent",
+                            "consent": {
+                                "channel": "email",
+                                "can_receive_marketing": true,
+                                "consent_status": {
+                                    "subscription": "any",
+                                    "filters": null
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "created": "2026-07-14T02:45:35+00:00",
+        "is_starred": false
+    },
+    "relationships": {
+        "profiles": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/T4KrGJ/relationships/profiles/",
+                "related": "https://a.klaviyo.com/api/segments/T4KrGJ/profiles/"
+            }
+        },
+        "tags": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/T4KrGJ/relationships/tags/",
+                "related": "https://a.klaviyo.com/api/segments/T4KrGJ/tags/"
+            }
+        },
+        "flow-triggers": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/T4KrGJ/relationships/flow-triggers/",
+                "related": "https://a.klaviyo.com/api/segments/T4KrGJ/flow-triggers/"
+            }
+        }
+    },
+    "links": {
+        "self": "https://a.klaviyo.com/api/segments/T4KrGJ/"
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "type": "flow",
+    "id": "RsE4VL",
+    "attributes": {
+        "name": "Essential Flow Recommendation_",
+        "status": "draft",
+        "archived": false,
+        "created": "2026-07-14T02:55:58+00:00",
+        "trigger_type": "Unconfigured",
+        "definition": {
+            "triggers": [],
+            "profile_filter": null,
+            "actions": [
+                {
+                    "id": "111761349",
+                    "type": "send-email",
+                    "data": {
+                        "message": {
+                            "from_email": "akramreshad@gmail.com",
+                            "from_label": "Longer Inc",
+                            "reply_to_email": "akramreshad@gmail.com",
+                            "cc_email": null,
+                            "bcc_email": null,
+                            "subject_line": "Order Confirmed!",
+                            "preview_text": "Thank you for your purchase.",
+                            "template_id": "WZMucm",
+                            "smart_sending_enabled": true,
+                            "transactional": false,
+                            "add_tracking_params": true,
+                            "custom_tracking_params": null,
+                            "additional_filters": null,
+                            "name": "Order Confirmation - Email",
+                            "id": "Tf5Wsf"
+                        },
+                        "status": "draft"
+                    },
+                    "links": {
+                        "next": null
+                    }
+                }
+            ],
+            "entry_action_id": "111761349"
+        }
+    },
+    "relationships": {
+        "flow-actions": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/flows/RsE4VL/relationships/flow-actions/",
+                "related": "https://a.klaviyo.com/api/flows/RsE4VL/flow-actions/"
+            }
+        },
+        "tags": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/flows/RsE4VL/relationships/tags/",
+                "related": "https://a.klaviyo.com/api/flows/RsE4VL/tags/"
+            }
+        }
+    },
+    "links": {
+        "self": "https://a.klaviyo.com/api/flows/RsE4VL/"
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "type": "segment",
+    "id": "UeagAA",
+    "attributes": {
+        "name": "Potential Purchasers (Shopify)",
+        "definition": {
+            "condition_groups": [
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "SrJp67",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "greater-than",
+                                "value": 0
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "in-the-last",
+                                "unit": "day",
+                                "quantity": 30
+                            },
+                            "metric_filters": null
+                        },
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "Ys36eb",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "greater-than",
+                                "value": 0
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "in-the-last",
+                                "unit": "day",
+                                "quantity": 30
+                            },
+                            "metric_filters": null
+                        },
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "WDBcHG",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "greater-than",
+                                "value": 0
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "in-the-last",
+                                "unit": "day",
+                                "quantity": 30
+                            },
+                            "metric_filters": null
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-metric",
+                            "metric_id": "XTDhWW",
+                            "measurement": "count",
+                            "measurement_filter": {
+                                "type": "numeric",
+                                "operator": "equals",
+                                "value": 0
+                            },
+                            "timeframe_filter": {
+                                "type": "date",
+                                "operator": "alltime"
+                            },
+                            "metric_filters": null
+                        }
+                    ]
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "profile-marketing-consent",
+                            "consent": {
+                                "channel": "email",
+                                "can_receive_marketing": true,
+                                "consent_status": {
+                                    "subscription": "any",
+                                    "filters": null
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "created": "2026-07-14T02:45:37+00:00",
+        "is_starred": false
+    },
+    "relationships": {
+        "profiles": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/UeagAA/relationships/profiles/",
+                "related": "https://a.klaviyo.com/api/segments/UeagAA/profiles/"
+            }
+        },
+        "tags": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/UeagAA/relationships/tags/",
+                "related": "https://a.klaviyo.com/api/segments/UeagAA/tags/"
+            }
+        },
+        "flow-triggers": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/segments/UeagAA/relationships/flow-triggers/",
+                "related": "https://a.klaviyo.com/api/segments/UeagAA/flow-triggers/"
+            }
+        }
+    },
+    "links": {
+        "self": "https://a.klaviyo.com/api/segments/UeagAA/"
+    }
+}

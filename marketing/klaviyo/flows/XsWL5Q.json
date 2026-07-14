@@ -1,0 +1,133 @@
+{
+    "type": "flow",
+    "id": "XsWL5Q",
+    "attributes": {
+        "name": "Essential Flow Recommendation_",
+        "status": "draft",
+        "archived": false,
+        "created": "2026-07-14T02:55:58+00:00",
+        "trigger_type": "Unconfigured",
+        "definition": {
+            "triggers": [],
+            "profile_filter": null,
+            "actions": [
+                {
+                    "id": "111761348",
+                    "type": "time-delay",
+                    "data": {
+                        "unit": "hours",
+                        "value": 4,
+                        "secondary_value": 0,
+                        "timezone": "profile",
+                        "delay_until_weekdays": [
+                            "monday",
+                            "tuesday",
+                            "wednesday",
+                            "thursday",
+                            "friday",
+                            "saturday",
+                            "sunday"
+                        ]
+                    },
+                    "links": {
+                        "next": "111761350"
+                    }
+                },
+                {
+                    "id": "111761350",
+                    "type": "send-email",
+                    "data": {
+                        "message": {
+                            "from_email": "akramreshad@gmail.com",
+                            "from_label": "Longer Inc",
+                            "reply_to_email": "akramreshad@gmail.com",
+                            "cc_email": null,
+                            "bcc_email": null,
+                            "subject_line": "Complete Your Order Now",
+                            "preview_text": "Items are waiting in your cart!",
+                            "template_id": "QZuM4h",
+                            "smart_sending_enabled": true,
+                            "transactional": false,
+                            "add_tracking_params": true,
+                            "custom_tracking_params": null,
+                            "additional_filters": null,
+                            "name": "Abandoned Checkout - Email 1",
+                            "id": "WPVHtd"
+                        },
+                        "status": "draft"
+                    },
+                    "links": {
+                        "next": "111761359"
+                    }
+                },
+                {
+                    "id": "111761359",
+                    "type": "time-delay",
+                    "data": {
+                        "unit": "hours",
+                        "value": 20,
+                        "secondary_value": 0,
+                        "timezone": "profile",
+                        "delay_until_weekdays": [
+                            "monday",
+                            "tuesday",
+                            "wednesday",
+                            "thursday",
+                            "friday",
+                            "saturday",
+                            "sunday"
+                        ]
+                    },
+                    "links": {
+                        "next": "111761360"
+                    }
+                },
+                {
+                    "id": "111761360",
+                    "type": "send-email",
+                    "data": {
+                        "message": {
+                            "from_email": "akramreshad@gmail.com",
+                            "from_label": "Longer Inc",
+                            "reply_to_email": "akramreshad@gmail.com",
+                            "cc_email": null,
+                            "bcc_email": null,
+                            "subject_line": "Finish Your Order Now!",
+                            "preview_text": "Don't miss out, complete your order today.",
+                            "template_id": "WQwXvz",
+                            "smart_sending_enabled": true,
+                            "transactional": false,
+                            "add_tracking_params": true,
+                            "custom_tracking_params": null,
+                            "additional_filters": null,
+                            "name": "Abandoned Checkout - Email 2",
+                            "id": "TMtJHu"
+                        },
+                        "status": "draft"
+                    },
+                    "links": {
+                        "next": null
+                    }
+                }
+            ],
+            "entry_action_id": "111761348"
+        }
+    },
+    "relationships": {
+        "flow-actions": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/flows/XsWL5Q/relationships/flow-actions/",
+                "related": "https://a.klaviyo.com/api/flows/XsWL5Q/flow-actions/"
+            }
+        },
+        "tags": {
+            "links": {
+                "self": "https://a.klaviyo.com/api/flows/XsWL5Q/relationships/tags/",
+                "related": "https://a.klaviyo.com/api/flows/XsWL5Q/tags/"
+            }
+        }
+    },
+    "links": {
+        "self": "https://a.klaviyo.com/api/flows/XsWL5Q/"
+    }
+}
