@@ -1,0 +1,23 @@
+LONGER CLINICAL AFFAIRS
+DEVELOPMENT NOTICE 003
+
+COHORT 001 IS FORMING.
+
+The first Longer formulation is moving through product development. Blue Pill is the lead candidate: a blue raspberry electrolyte powder designed for real physical occasions and unusually serious bedside manner.
+
+CURRENT PROGRAM STATUS
+
+Hero formulation: BLUE PILL
+Flavor profile: BLUE RASPBERRY
+First patient group: COHORT 001
+
+Cohort members will receive development updates and priority notice when samples, first-run access, and launch enrollment become available.
+
+Remain enrolled. Continue physical activity as tolerated. Additional instructions will follow.
+
+View the development program: https://itslonger.com
+
+First-run access will be administered according to enrollment priority and observed demand.
+
+{% organization.full_address %}
+{% unsubscribe 'Discontinue clinical notices' %}

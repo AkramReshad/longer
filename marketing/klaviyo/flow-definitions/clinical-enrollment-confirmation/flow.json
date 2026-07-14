@@ -1,0 +1,120 @@
+{
+  "name": "Clinical Enrollment Confirmation",
+  "trigger": {
+    "type": "list",
+    "name": "Longer Clinical Enrollment — Prelaunch"
+  },
+  "templates": [
+    {
+      "name": "Clinical Enrollment Confirmation — 01 Enrollment Confirmed",
+      "editor_type": "CODE",
+      "html_file": "emails/01-enrollment-confirmed.html",
+      "text_file": "emails/01-enrollment-confirmed.txt"
+    },
+    {
+      "name": "Clinical Enrollment Confirmation — 02 Electrolyte Dysfunction",
+      "editor_type": "CODE",
+      "html_file": "emails/02-electrolyte-dysfunction.html",
+      "text_file": "emails/02-electrolyte-dysfunction.txt"
+    },
+    {
+      "name": "Clinical Enrollment Confirmation — 03 Cohort 001",
+      "editor_type": "CODE",
+      "html_file": "emails/03-cohort-001.html",
+      "text_file": "emails/03-cohort-001.txt"
+    }
+  ],
+  "actions": [
+    {
+      "key": "enrollment-confirmed",
+      "type": "send-email",
+      "next": "wait-two-days",
+      "status": "live",
+      "message": {
+        "name": "Enrollment Confirmed",
+        "template": "Clinical Enrollment Confirmation — 01 Enrollment Confirmed",
+        "from_email": "clinical@itslonger.com",
+        "from_label": "Longer Clinical Team",
+        "reply_to_email": "clinical@itslonger.com",
+        "subject_line": "Clinical enrollment confirmed",
+        "preview_text": "Your case of Electrolyte Dysfunction is now under review.",
+        "smart_sending_enabled": false,
+        "transactional": false,
+        "add_tracking_params": true
+      }
+    },
+    {
+      "key": "wait-two-days",
+      "type": "time-delay",
+      "next": "electrolyte-dysfunction",
+      "unit": "days",
+      "value": 2,
+      "secondary_value": 0,
+      "timezone": "profile",
+      "delay_until_weekdays": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday"
+      ]
+    },
+    {
+      "key": "electrolyte-dysfunction",
+      "type": "send-email",
+      "next": "wait-three-more-days",
+      "status": "live",
+      "message": {
+        "name": "What Is Electrolyte Dysfunction?",
+        "template": "Clinical Enrollment Confirmation — 02 Electrolyte Dysfunction",
+        "from_email": "clinical@itslonger.com",
+        "from_label": "Longer Clinical Team",
+        "reply_to_email": "clinical@itslonger.com",
+        "subject_line": "Understanding Electrolyte Dysfunction",
+        "preview_text": "Recognize the symptoms before performance is affected.",
+        "smart_sending_enabled": false,
+        "transactional": false,
+        "add_tracking_params": true
+      }
+    },
+    {
+      "key": "wait-three-more-days",
+      "type": "time-delay",
+      "next": "cohort-001",
+      "unit": "days",
+      "value": 3,
+      "secondary_value": 0,
+      "timezone": "profile",
+      "delay_until_weekdays": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday"
+      ]
+    },
+    {
+      "key": "cohort-001",
+      "type": "send-email",
+      "next": null,
+      "status": "live",
+      "message": {
+        "name": "Product Development — Cohort 001",
+        "template": "Clinical Enrollment Confirmation — 03 Cohort 001",
+        "from_email": "clinical@itslonger.com",
+        "from_label": "Longer Clinical Team",
+        "reply_to_email": "clinical@itslonger.com",
+        "subject_line": "Cohort 001 development notice",
+        "preview_text": "The first Longer formulation is moving toward production.",
+        "smart_sending_enabled": false,
+        "transactional": false,
+        "add_tracking_params": true
+      }
+    }
+  ],
+  "entry": "enrollment-confirmed"
+}

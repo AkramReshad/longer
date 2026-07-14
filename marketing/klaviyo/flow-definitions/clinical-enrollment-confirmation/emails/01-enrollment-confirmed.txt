@@ -1,0 +1,20 @@
+LONGER CLINICAL AFFAIRS
+PATIENT NOTICE 001
+
+ENROLLMENT CONFIRMED.
+
+Your information has been received by the Longer Clinical Team. You are now enrolled for updates concerning the identification, management, and treatment of Electrolyte Dysfunction.
+
+ENROLLMENT STATUS
+Active — Cohort consideration pending
+
+No action is required at this time. Further clinical correspondence will explain the condition and document the development of the first Longer formulation.
+
+For moments when performance matters,
+Longer Clinical Team
+
+If dehydration persists longer than four hours, consult your training partner.
+
+You received this notice after enrolling at https://itslonger.com.
+{% organization.full_address %}
+{% unsubscribe 'Discontinue clinical notices' %}

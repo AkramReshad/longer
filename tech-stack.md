@@ -1,6 +1,6 @@
 ---
 read_when: Read before changing the storefront architecture, deployment, waitlist capture, or commerce integration. This is the canonical technical decision record.
-last_updated: 2026-07-10
+last_updated: 2026-07-13
 ---
 
 # Longer technical stack
@@ -25,7 +25,7 @@ The earlier Shopify Dawn decision is superseded. There is no Shopify theme in th
 | Route | Status | Purpose |
 | --- | --- | --- |
 | `/` | Canonical | Clinical validation storefront |
-| `/api/waitlist` | Canonical | Validates and forwards waitlist submissions |
+| `/api/waitlist` | Canonical | Validates submissions and enrolls them in Klaviyo |
 | `/clinical` | Redirect | Legacy concept URL redirects to `/` |
 | `/performance` | Redirect | Legacy concept URL redirects to `/` |
 | `/pharma` | Redirect | Legacy concept URL redirects to `/` |
@@ -34,24 +34,17 @@ Prototype components and assets are retained for creative reference. Their forme
 
 ## Waitlist integration
 
-The browser submits JSON to `/api/waitlist`. The server validates the email, rejects bot submissions through a honeypot, and forwards this payload to `WAITLIST_WEBHOOK_URL`:
-
-```json
-{
-  "email": "patient@example.com",
-  "source": "storefront",
-  "createdAt": "ISO-8601 timestamp"
-}
-```
+The browser submits JSON to `/api/waitlist`. The server validates the email, rejects bot submissions through a honeypot, and subscribes the address to Klaviyo list `RH9PSK` through the Bulk Subscribe Profiles API. The source is recorded as the Klaviyo subscription job's custom source.
 
 Copy `store/.env.example` into the deployment environment and configure:
 
 ```sh
-NEXT_PUBLIC_SITE_URL=https://example.com
-WAITLIST_WEBHOOK_URL=https://example.com/longer-waitlist
+NEXT_PUBLIC_SITE_URL=https://itslonger.com
+KLAVIYO_API_KEY=pk_your_private_key
+KLAVIYO_WAITLIST_LIST_ID=RH9PSK
 ```
 
-The receiving email platform remains an open decision.
+The Klaviyo key is server-only and requires `lists:write`, `profiles:write`, and `subscriptions:write`. Never expose it through a `NEXT_PUBLIC_` variable.
 
 Add rate limiting and publish an accurate privacy policy before enabling public capture.
 

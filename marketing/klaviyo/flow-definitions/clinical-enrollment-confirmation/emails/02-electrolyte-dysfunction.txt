@@ -1,0 +1,24 @@
+LONGER CLINICAL AFFAIRS
+CLINICAL BULLETIN 002
+
+WHAT IS ELECTROLYTE DYSFUNCTION?
+
+Electrolyte Dysfunction, commonly abbreviated ED, occurs when physical demand exceeds what water alone can support.
+
+COMMON PRESENTING CONDITIONS
+
+01 — Heat, sweat, and prolonged exertion
+02 — Mile 20 and the hours beyond it
+03 — Pregame, postgame, and next morning
+04 — Cramps, fatigue, and reduced duration
+
+The Longer development program is evaluating a legitimate electrolyte stick pack for these moments. The intended result is simple: credible hydration performance delivered with pharmaceutical seriousness.
+
+Your enrollment keeps you close to formulation decisions, trial opportunities, and first-run access.
+
+Review the condition: https://itslonger.com
+
+Ask your trainer if Longer is right for your next physical occasion.
+
+{% organization.full_address %}
+{% unsubscribe 'Discontinue clinical notices' %}

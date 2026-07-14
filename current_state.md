@@ -1,6 +1,6 @@
 ---
 read_when: Read before making strategy, product, storefront, content, packaging, or operations decisions for Longer. This is the canonical operating snapshot.
-last_updated: 2026-07-10
+last_updated: 2026-07-13
 ---
 
 # Longer current state
@@ -35,10 +35,10 @@ The canonical page now includes:
 - a diagnosis-led hero and red safety-information band;
 - a symptom self-assessment, Blue Pill product reveal, field-study sequence, adverse-reaction ticker, treatment selection, full prescribing insert, patient outcome, and waitlist close;
 - email validation, spam trapping, loading, success, and error states;
-- a server-side waitlist webhook boundary at `/api/waitlist`;
+- direct server-side Klaviyo enrollment through `/api/waitlist`;
 - social metadata and a production-safe title and description.
 
-The waitlist requires `WAITLIST_WEBHOOK_URL` before launch. Until configured, the form provides an explicit temporary-unavailability state.
+The waitlist enrolls submissions into Klaviyo list `RH9PSK` using server-only credentials. Until `KLAVIYO_API_KEY` and `KLAVIYO_WAITLIST_LIST_ID` are configured, the form provides an explicit temporary-unavailability state.
 
 The routes `/clinical`, `/performance`, and `/pharma` redirect to the canonical storefront. Their components and assets remain in the repository as internal concept studies.
 
@@ -50,12 +50,11 @@ Co-packer research remains parallel to validation. Existing lead names in brains
 
 ## Immediate next decisions
 
-1. Select the email platform or webhook destination and configure `WAITLIST_WEBHOOK_URL`.
-2. Confirm the production domain and deployment target.
-3. Consolidate the packaging mark: current concept images contain more than one silhouette treatment.
-4. Publish an accurate privacy policy and add rate limiting before enabling public email capture.
-5. Obtain regulatory review before publishing final formula quantities, packaging claims, dosing language, or paid ads.
-6. Build and post the first content-validation batch against the canonical storefront.
+1. Build and activate the Klaviyo clinical-enrollment welcome flow.
+2. Consolidate the packaging mark: current concept images contain more than one silhouette treatment.
+3. Publish an accurate privacy policy and add rate limiting before enabling public email capture.
+4. Obtain regulatory review before publishing final formula quantities, packaging claims, dosing language, or paid ads.
+5. Build and post the first content-validation batch against the canonical storefront.
 
 ## Production trigger
 

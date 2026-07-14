@@ -1,12 +1,62 @@
 import { NextResponse } from 'next/server';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const KLAVIYO_API_URL = 'https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs';
+const KLAVIYO_REVISION = '2026-04-15';
 
 type WaitlistPayload = {
   readonly email?: unknown;
   readonly source?: unknown;
   readonly website?: unknown;
 };
+
+type KlaviyoConfiguration = {
+  readonly apiKey: string;
+  readonly listId: string;
+};
+
+function klaviyoConfiguration(): KlaviyoConfiguration | undefined {
+  const apiKey = process.env['KLAVIYO_API_KEY']?.trim();
+  const listId = process.env['KLAVIYO_WAITLIST_LIST_ID']?.trim();
+
+  if (!apiKey || !listId) {
+    return undefined;
+  }
+
+  return { apiKey, listId };
+}
+
+function subscriptionPayload(email: string, source: string, listId: string): object {
+  return {
+    data: {
+      type: 'profile-subscription-bulk-create-job',
+      attributes: {
+        custom_source: `Longer landing page: ${source}`,
+        historical_import: false,
+        profiles: {
+          data: [
+            {
+              type: 'profile',
+              attributes: {
+                email,
+                subscriptions: {
+                  email: {
+                    marketing: { consent: 'SUBSCRIBED' }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      relationships: {
+        list: {
+          data: { type: 'list', id: listId }
+        }
+      }
+    }
+  };
+}
 
 export async function POST(request: Request): Promise<NextResponse> {
   let payload: WaitlistPayload;
@@ -27,9 +77,9 @@ export async function POST(request: Request): Promise<NextResponse> {
     return NextResponse.json({ message: 'Enter a valid email address.' }, { status: 400 });
   }
 
-  const webhookUrl = process.env['WAITLIST_WEBHOOK_URL'];
+  const configuration = klaviyoConfiguration();
 
-  if (webhookUrl === undefined) {
+  if (configuration === undefined) {
     return NextResponse.json(
       { message: 'Waitlist enrollment is temporarily unavailable. Please try again later.' },
       { status: 503 }
@@ -41,14 +91,15 @@ export async function POST(request: Request): Promise<NextResponse> {
   let upstreamResponse: Response;
 
   try {
-    upstreamResponse = await fetch(webhookUrl, {
+    upstreamResponse = await fetch(KLAVIYO_API_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email,
-        source,
-        createdAt: new Date().toISOString()
-      }),
+      headers: {
+        Authorization: `Klaviyo-API-Key ${configuration.apiKey}`,
+        Accept: 'application/vnd.api+json',
+        'Content-Type': 'application/vnd.api+json',
+        Revision: KLAVIYO_REVISION
+      },
+      body: JSON.stringify(subscriptionPayload(email, source || 'site', configuration.listId)),
       cache: 'no-store',
       signal: AbortSignal.timeout(8_000)
     });
@@ -60,6 +111,11 @@ export async function POST(request: Request): Promise<NextResponse> {
   }
 
   if (!upstreamResponse.ok) {
+    const requestId = upstreamResponse.headers.get('x-request-id');
+    console.error('Klaviyo waitlist enrollment failed.', {
+      status: upstreamResponse.status,
+      requestId
+    });
     return NextResponse.json(
       { message: 'Trial notification could not be recorded. Please try again later.' },
       { status: 502 }
