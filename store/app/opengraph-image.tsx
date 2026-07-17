@@ -11,7 +11,7 @@ export const size = {
 export const contentType = 'image/png';
 
 export default function OpenGraphImage() {
-  const lockup = readFileSync(join(process.cwd(), 'public/logos/longer-horizontal-lockup.svg'), 'utf8');
+  const lockup = readFileSync(join(process.cwd(), 'public/brand/longer-lockup-horizontal.svg'), 'utf8');
   const encodedLockup = Buffer.from(lockup).toString('base64');
 
   return new ImageResponse(

@@ -1,6 +1,6 @@
 ---
 read_when: Read before making strategy, product, storefront, content, packaging, or operations decisions for Longer. This is the canonical operating snapshot.
-last_updated: 2026-07-13
+last_updated: 2026-07-15
 ---
 
 # Longer current state
@@ -19,6 +19,7 @@ The product must remain credible CPG. The pharmaceutical framing earns attention
 
 - **Validation sequence:** content → waitlist → co-packer quotes → demand signal → production → DTC and TikTok Shop.
 - **Hero SKU:** Blue Pill, currently positioned as blue raspberry.
+- **Logo system:** the woman silhouette is the canonical mark. Approved configurations are the mark, horizontal lockup, and stacked lockup in Pantone 2935 C / `#0057B8`. Source assets and the Instrument Serif font live in `brand/`.
 - **Additional flavor candidates:** Watermelonafil and PED Pineapple remain under review.
 - **Storefront direction:** the canonical validation storefront is an outrageous pharmaceutical campaign built around the Clinical hero. It commits to diagnosis, treatment, warnings, adverse reactions, prescribing information, patient outcomes, and product theater across the entire page.
 - **Creative mandate:** push the campaign until it attracts objection, then decide what to pull back. Compliance review happens after the strongest version exists; creative work should not pre-negotiate against imagined objections.
@@ -51,10 +52,9 @@ Co-packer research remains parallel to validation. Existing lead names in brains
 ## Immediate next decisions
 
 1. Build and activate the Klaviyo clinical-enrollment welcome flow.
-2. Consolidate the packaging mark: current concept images contain more than one silhouette treatment.
-3. Publish an accurate privacy policy and add rate limiting before enabling public email capture.
-4. Obtain regulatory review before publishing final formula quantities, packaging claims, dosing language, or paid ads.
-5. Build and post the first content-validation batch against the canonical storefront.
+2. Publish an accurate privacy policy and add rate limiting before enabling public email capture.
+3. Obtain regulatory review before publishing final formula quantities, packaging claims, dosing language, or paid ads.
+4. Build and post the first content-validation batch against the canonical storefront.
 
 ## Production trigger
 

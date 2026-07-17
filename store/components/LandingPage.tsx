@@ -51,7 +51,7 @@ export function LandingPage({ variant }: LandingPageProps) {
       <main className={`page-root ${variant.themeClass}`}>
         <nav className="site-nav reveal">
           <Link href="/" className="brand-link" aria-label="Longer landing page picker">
-            <img src="/longer-mark-transparent.png" alt="" />
+            <img src="/brand/longer-mark.png" alt="" />
             <span>LONGER</span>
           </Link>
           <div className="nav-links" aria-label="Variant routes">

@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "brand:sync": "node scripts/sync-brand-assets.mjs",
+    "predev": "pnpm brand:sync",
     "dev": "next dev",
+    "prebuild": "pnpm brand:sync",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit -p tsconfig.typecheck.json"

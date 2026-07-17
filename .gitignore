@@ -7,6 +7,9 @@ store/node_modules/
 store/.next/
 out/
 
+# Generated brand exports
+store/public/brand/
+
 # Local browser artifacts
 .browser-runtime/
 store/.browser-runtime/
@@ -21,6 +24,8 @@ marketing/.venv/
 *.log
 .DS_Store
 *.tsbuildinfo
+__pycache__/
+*.py[cod]
 
 # Vercel
 .vercel/
