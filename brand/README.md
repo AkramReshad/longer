@@ -1,6 +1,6 @@
 ---
 read_when: Read before creating, exporting, or placing the Longer logo in storefront, packaging, campaign, or partner materials.
-last_updated: 2026-07-15
+last_updated: 2026-08-08
 ---
 
 # Longer brand assets
@@ -11,11 +11,15 @@ The woman silhouette is the canonical Longer mark. Use only these configurations
 
 | Asset | Configuration | Primary use |
 | --- | --- | --- |
-| `logos/longer-mark.png` | Symbol | Avatars, app icons, small placements |
-| `logos/longer-lockup-horizontal.svg` | Horizontal lockup | Website headers, email headers, wide placements |
-| `logos/longer-lockup-stacked.png` | Stacked lockup | Packaging fronts, social graphics, vertical placements |
+| `logos/mark/blue.png` | Blue symbol | Avatars, app icons, small placements |
+| `logos/mark/white.png` | White symbol | Dark or photographic backgrounds |
+| `logos/logo/horizontal_blue.svg` | Blue horizontal logo | Website headers, email headers, wide placements |
+| `logos/logo/horizontal_white.svg` | White horizontal logo | Dark or photographic backgrounds |
+| `logos/logo/horizontal_white.png` | White horizontal logo, raster export | Applications without SVG support |
+| `logos/logo/stacked_blue.png` | Blue stacked logo | Packaging fronts, social graphics, vertical placements |
+| `logos/logo/stacked_white.png` | White stacked logo | Dark or photographic backgrounds |
 
-All configurations use Pantone 2935 C, represented digitally as `#0057B8`. Do not redraw the silhouette, substitute another blue, alter the proportions, or reconstruct a lockup from separate elements.
+Blue configurations use Pantone 2935 C, represented digitally as `#0057B8`. White configurations use `#FFFFFF`. Do not redraw the silhouette, substitute another color, alter the proportions, or reconstruct a logo from separate elements.
 
 ## Typography
 
@@ -23,7 +27,7 @@ All configurations use Pantone 2935 C, represented digitally as `#0057B8`. Do no
 
 ## Storefront exports
 
-The canonical assets live in this directory. `store/scripts/sync-brand-assets.mjs` copies the three approved files into `store/public/brand/` for deployment. Run from `store/`:
+The canonical assets live in `logos/logo/` and `logos/mark/`. `store/scripts/sync-brand-assets.mjs` copies all seven approved files into matching directories under `store/public/brand/` for deployment. Run from `store/`:
 
 ```sh
 pnpm brand:sync

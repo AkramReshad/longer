@@ -8,13 +8,19 @@ const sourceRoot = join(workspaceRoot, 'brand', 'logos');
 const publicRoot = join(storeRoot, 'public', 'brand');
 
 const assets = [
-  'longer-mark.png',
-  'longer-lockup-horizontal.svg',
-  'longer-lockup-stacked.png'
+  'mark/blue.png',
+  'mark/white.png',
+  'logo/horizontal_blue.svg',
+  'logo/horizontal_white.svg',
+  'logo/horizontal_white.png',
+  'logo/stacked_blue.png',
+  'logo/stacked_white.png'
 ];
 
 mkdirSync(publicRoot, { recursive: true });
 
 for (const asset of assets) {
-  copyFileSync(join(sourceRoot, asset), join(publicRoot, asset));
+  const destination = join(publicRoot, asset);
+  mkdirSync(dirname(destination), { recursive: true });
+  copyFileSync(join(sourceRoot, asset), destination);
 }

@@ -47,7 +47,7 @@ const flavors = [
 ] as const;
 
 function LongerMark({ className }: LogoProps) {
-  return <img className={className} src="/brand/longer-mark.png" alt="" />;
+  return <img className={className} src="/brand/mark/blue.png" alt="" />;
 }
 
 function LongerLogo({ className }: LogoProps) {
