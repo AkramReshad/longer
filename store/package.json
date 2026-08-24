@@ -12,9 +12,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.typecheck.json"
   },
   "dependencies": {
-    "@gsap/react": "2.1.2",
-    "gsap": "3.15.0",
-    "lucide-react": "1.16.0",
+    "@longer/ds": "workspace:*",
     "next": "16.2.6",
     "react": "19.2.6",
     "react-dom": "19.2.6"
@@ -23,6 +21,6 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "typescript": "latest"
+    "typescript": "^5.9.3"
   }
 }

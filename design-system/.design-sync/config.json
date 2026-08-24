@@ -1,0 +1,45 @@
+{
+  "pkg": "@longer/ds",
+  "globalName": "LongerDS",
+  "projectId": "c84aaa88-da7f-485f-b15b-850bbe06d48c",
+  "shape": "package",
+  "buildCmd": "pnpm build",
+  "srcDir": "src",
+  "tsconfig": "tsconfig.json",
+  "cssEntry": "dist/longer-ds.css",
+  "docsDir": "docs",
+  "guidelinesGlob": "guides/**/*.md",
+  "readmeHeader": ".design-sync/conventions.md",
+  "overrides": {
+    "SafetyAlert": {
+      "cardMode": "column"
+    },
+    "SectionHeading": {
+      "cardMode": "column"
+    },
+    "SymptomChecklist": {
+      "cardMode": "column"
+    },
+    "PrescribingInsert": {
+      "cardMode": "column"
+    },
+    "PatientQuote": {
+      "cardMode": "column"
+    },
+    "StatBlock": {
+      "cardMode": "column"
+    },
+    "Marquee": {
+      "cardMode": "column"
+    },
+    "LongerProvider": {
+      "cardMode": "column"
+    },
+    "TreatmentCard": {
+      "cardMode": "column"
+    },
+    "WaitlistForm": {
+      "cardMode": "column"
+    }
+  }
+}

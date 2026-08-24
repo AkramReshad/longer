@@ -41,7 +41,34 @@ The canonical page now includes:
 
 The waitlist enrolls submissions into Klaviyo list `RH9PSK` using server-only credentials. Until `KLAVIYO_API_KEY` and `KLAVIYO_WAITLIST_LIST_ID` are configured, the form provides an explicit temporary-unavailability state.
 
-The routes `/clinical`, `/performance`, and `/pharma` redirect to the canonical storefront. Their components and assets remain in the repository as internal concept studies.
+The `/clinical`, `/performance`, and `/pharma` concept studies have been removed. The three paths still 308-redirect to the canonical storefront via `next.config.ts` so existing links keep working.
+
+## Design system
+
+`design-system/` holds `@longer/ds` — 18 React components carrying the
+pharmaceutical system (SafetyAlert, PrescribingInsert, SymptomChecklist,
+TreatmentCard, WaitlistForm, RxSeal, Marquee, and the type/brand primitives),
+Instrument Serif, and the `--lngr-*` token palette.
+
+It is synced to Claude Design at
+`https://claude.ai/design/p/c84aaa88-da7f-485f-b15b-850bbe06d48c`, so design work
+there is composed from the real shipped components rather than generic parts.
+Each component carries a `.prompt.md` with the copy rules for that component, not
+just its API.
+
+The repo is a pnpm workspace. `store/` consumes `@longer/ds`, and the canonical
+storefront (`components/StorefrontPage.tsx`) is built from DS components — one
+source of truth for the look. Page-level layout that the DS does not own lives in
+`store/app/leaflet.css`.
+
+Re-syncing the DS after a change: see `design-system/.design-sync/NOTES.md`.
+`pnpm build` at the repo root builds the DS then the store.
+
+The storefront is the only page. `LandingPage`, `ConceptPages`,
+`MotionOrchestrator`, the store's own `WaitlistForm`, `lib/variants.ts`, and ten
+unused concept renders were deleted along with the concept routes, and `gsap`,
+`@gsap/react` and `lucide-react` dropped with them. `globals.css` went from 3,266
+lines to a base reset.
 
 ## Product status
 

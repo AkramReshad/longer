@@ -1,19 +1,13 @@
 import type { Metadata } from 'next';
-import { Geist, Instrument_Serif } from 'next/font/google';
+import { Geist } from 'next/font/google';
 import type { ReactNode } from 'react';
+import '@longer/ds/styles.css';
 import './globals.css';
-import './bold-storefront.css';
+import './leaflet.css';
 
 const geist = Geist({
   subsets: ['latin'],
   variable: '--font-geist',
-  display: 'swap'
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-instrument',
   display: 'swap'
 });
 
@@ -50,7 +44,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={`${geist.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={geist.variable}>
       <body>{children}</body>
     </html>
   );

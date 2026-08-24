@@ -1,0 +1,11 @@
+/* Instrument Serif — the Longer brand face.
+ * Shipped with the system so every surface renders in the real typeface.
+ */
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/InstrumentSerif-Regular.ttf') format('truetype');
+}

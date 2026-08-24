@@ -1,0 +1,638 @@
+/* Storefront page layout.
+ *
+ * Component styling lives in @longer/ds. This file holds only what the design
+ * system does not own: page-level grids, the photographic compositions, and
+ * section rhythm.
+ */
+
+.storefront {
+  overflow: hidden;
+}
+
+.leaflet-skip {
+  position: fixed;
+  z-index: 50;
+  top: 10px;
+  left: 10px;
+  background: var(--lngr-white);
+  color: var(--lngr-blue);
+  padding: 10px 14px;
+  transform: translateY(-160%);
+}
+
+.leaflet-skip:focus {
+  transform: none;
+}
+
+/* ---- Header ---- */
+
+.leaflet-header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: grid;
+  width: 100%;
+  min-height: 84px;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid var(--lngr-line-soft);
+  padding: 14px clamp(20px, 3vw, 48px);
+}
+
+.leaflet-header > p {
+  margin: 0;
+  color: var(--lngr-blue-deep);
+  font-family: var(--lngr-font-serif);
+  font-size: 0.92rem;
+}
+
+.leaflet-header > a:last-child {
+  justify-self: end;
+}
+
+/* ---- Hero ---- */
+
+.leaflet-hero {
+  position: relative;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-columns: minmax(480px, 0.88fr) minmax(560px, 1.12fr);
+  isolation: isolate;
+  border-bottom: 1px solid var(--lngr-line);
+  background: var(--lngr-blue-tint);
+  padding-top: 84px;
+}
+
+.leaflet-hero::before {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  content: '';
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.9) 39%, rgba(255, 255, 255, 0.38) 52%, transparent 66%),
+    linear-gradient(90deg, rgba(0, 77, 180, 0.045) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0, 77, 180, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 72px 72px, 72px 72px;
+}
+
+.leaflet-hero-copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-content: center;
+  padding: 80px clamp(36px, 6.4vw, 112px) 96px;
+}
+
+.leaflet-hero h1 {
+  max-width: 780px;
+  margin: 26px 0 0;
+  color: var(--lngr-blue-deep);
+  font-family: var(--lngr-font-serif);
+  font-size: clamp(5.7rem, 8.2vw, 10rem);
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.leaflet-hero-body {
+  max-width: 620px;
+  margin: 38px 0 0;
+  color: rgba(2, 31, 74, 0.74);
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.leaflet-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.leaflet-hero-fineprint {
+  margin-top: 27px;
+}
+
+.leaflet-hero-product {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+}
+
+.leaflet-hero-scene {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.leaflet-hero .lngr-rx-seal {
+  position: absolute;
+  z-index: 4;
+  top: 18%;
+  right: 32%;
+}
+
+.leaflet-hero-index {
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+}
+
+/* ---- Diagnosis ---- */
+
+.leaflet-diagnosis {
+  padding: clamp(90px, 10vw, 170px) clamp(20px, 6vw, 96px) 110px;
+}
+
+.leaflet-diagnosis > header,
+.leaflet-diagnosis > .lngr-symptoms,
+.leaflet-diagnosis > footer {
+  width: min(1320px, 100%);
+  margin-inline: auto;
+}
+
+.leaflet-diagnosis > header {
+  margin-bottom: 70px;
+}
+
+.leaflet-diagnosis > footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 38px;
+  color: rgba(255, 255, 255, 0.67);
+}
+
+.leaflet-diagnosis > footer p {
+  margin: 0;
+}
+
+.leaflet-diagnosis > footer a {
+  color: var(--lngr-white);
+  font-family: var(--lngr-font-serif);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* ---- Blue Pill product panel ---- */
+
+.leaflet-product {
+  position: relative;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-columns: minmax(420px, 0.7fr) minmax(620px, 1.3fr);
+  overflow: hidden;
+}
+
+.leaflet-product::before {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 82px 82px;
+}
+
+.leaflet-product-copy {
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  padding: 100px 30px 100px clamp(34px, 7vw, 112px);
+}
+
+.leaflet-product-copy h2 {
+  margin: 18px 0 0;
+  font-family: var(--lngr-font-serif);
+  font-size: clamp(8rem, 14vw, 17rem);
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: -0.07em;
+}
+
+.leaflet-product-lede {
+  margin: 38px 0 10px;
+  font-family: var(--lngr-font-serif);
+  font-size: clamp(1.8rem, 2.8vw, 3.2rem);
+  font-style: italic;
+}
+
+.leaflet-product-support {
+  margin: 0 0 50px;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--lngr-font-serif);
+  font-size: clamp(1rem, 1.35vw, 1.35rem);
+  font-style: italic;
+}
+
+.leaflet-product-copy .lngr-specs {
+  max-width: 560px;
+}
+
+.leaflet-product-stage {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  min-width: 0;
+  overflow: hidden;
+  place-items: center;
+  border-left: 1px solid var(--lngr-line-invert);
+  background: #f7f9fc;
+}
+
+.leaflet-product-stage::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  content: '';
+  box-shadow: inset 38px 0 70px rgba(0, 91, 187, 0.16);
+}
+
+.leaflet-product-stage img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.leaflet-product-stage p {
+  position: absolute;
+  z-index: 2;
+  right: 5%;
+  bottom: 4%;
+  margin: 0;
+  color: var(--lngr-blue-deep);
+  font-size: 0.58rem;
+  text-transform: uppercase;
+}
+
+.leaflet-product .lngr-vindex {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ---- Study ---- */
+
+.leaflet-study {
+  position: relative;
+  display: grid;
+  min-height: 110dvh;
+  overflow: hidden;
+  color: var(--lngr-white);
+  isolation: isolate;
+}
+
+.leaflet-study > img {
+  z-index: -3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.leaflet-study-scrim {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(1, 7, 18, 0.94) 0%, rgba(1, 7, 18, 0.62) 42%, rgba(1, 7, 18, 0.1) 72%),
+    linear-gradient(0deg, rgba(0, 36, 88, 0.75), transparent 55%);
+}
+
+.leaflet-study-copy {
+  align-self: center;
+  width: min(760px, 60vw);
+  padding: 120px 0 100px clamp(28px, 7vw, 110px);
+}
+
+.leaflet-study-copy h2 {
+  margin: 24px 0 0;
+  font-family: var(--lngr-font-serif);
+  font-size: clamp(5.5rem, 9vw, 11rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.055em;
+}
+
+.leaflet-study-copy .lngr-pullquote {
+  margin-top: 56px;
+}
+
+.leaflet-study .lngr-stats {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(720px, 48vw);
+  backdrop-filter: blur(15px);
+}
+
+/* ---- Side effects ---- */
+
+.leaflet-effects {
+  padding: 120px 0 100px;
+}
+
+.leaflet-effects > header,
+.leaflet-effects-notes {
+  width: min(1320px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.leaflet-effects > header {
+  margin-bottom: 70px;
+}
+
+.leaflet-effects-notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 54px;
+}
+
+.leaflet-effects-notes p {
+  margin: 0;
+  border-top: 1px solid var(--lngr-line);
+  color: rgba(0, 44, 107, 0.72);
+  padding-top: 17px;
+  font-family: var(--lngr-font-serif);
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+/* ---- Enrollment ---- */
+
+.leaflet-enrollment {
+  display: grid;
+  min-height: 94dvh;
+  grid-template-columns: minmax(500px, 1.15fr) minmax(380px, 0.55fr);
+  align-items: center;
+  gap: clamp(60px, 9vw, 150px);
+  padding: 100px clamp(24px, 7vw, 110px);
+}
+
+.leaflet-enrollment .lngr-heading__title {
+  max-width: 900px;
+  font-size: clamp(6rem, 10vw, 13rem);
+  line-height: 0.78;
+  letter-spacing: -0.06em;
+}
+
+/* ---- Footer ---- */
+
+.leaflet-footer {
+  display: grid;
+  min-height: 150px;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 30px;
+  padding: 30px clamp(22px, 4vw, 64px);
+}
+
+.leaflet-footer > a:last-child {
+  justify-self: end;
+  color: var(--lngr-blue);
+  font-family: var(--lngr-font-serif);
+  font-size: 0.9rem;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 980px) {
+  .leaflet-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .leaflet-header > p {
+    display: none;
+  }
+
+  .leaflet-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .leaflet-hero-copy {
+    min-height: 78dvh;
+    padding-bottom: 300px;
+  }
+
+  .leaflet-hero-product {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 370px;
+  }
+
+  .leaflet-hero .lngr-rx-seal {
+    top: 2%;
+    right: 7%;
+    --lngr-seal-size: 108px;
+  }
+
+  .leaflet-product {
+    grid-template-columns: 1fr;
+  }
+
+  .leaflet-product-stage {
+    min-height: 58dvh;
+    border-left: 0;
+    border-top: 1px solid var(--lngr-line-invert);
+  }
+
+  .leaflet-study .lngr-stats {
+    width: 100%;
+  }
+
+  .leaflet-enrollment {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .leaflet-header {
+    min-height: 70px;
+    padding: 10px 15px;
+  }
+
+  .leaflet-hero {
+    padding-top: 70px;
+  }
+
+  .leaflet-hero-copy {
+    min-height: 100dvh;
+    padding: 70px 18px 270px;
+  }
+
+  .leaflet-hero h1 {
+    font-size: clamp(5rem, 22vw, 7rem);
+  }
+
+  .leaflet-hero-body {
+    font-size: 0.88rem;
+  }
+
+  .leaflet-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .leaflet-hero .lngr-rx-seal,
+  .leaflet-hero-index {
+    display: none;
+  }
+
+  .leaflet-diagnosis {
+    padding: 85px 18px 80px;
+  }
+
+  .leaflet-diagnosis > header {
+    margin-bottom: 45px;
+  }
+
+  .leaflet-diagnosis > footer {
+    flex-direction: column;
+  }
+
+  .leaflet-product-copy {
+    padding: 85px 18px 35px;
+  }
+
+  .leaflet-product-copy h2 {
+    font-size: 8.2rem;
+  }
+
+  .leaflet-product-stage {
+    min-height: 52dvh;
+  }
+
+  .leaflet-product-stage img {
+    object-position: 52% center;
+  }
+
+  .leaflet-study {
+    min-height: 115dvh;
+  }
+
+  .leaflet-study-copy {
+    width: 100%;
+    align-self: start;
+    padding: 100px 20px 310px;
+  }
+
+  .leaflet-study-copy h2 {
+    font-size: clamp(4.8rem, 20vw, 7rem);
+  }
+
+  .leaflet-effects {
+    padding-top: 85px;
+  }
+
+  .leaflet-effects > header {
+    margin-bottom: 46px;
+  }
+
+  .leaflet-effects-notes {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .leaflet-enrollment {
+    min-height: 100dvh;
+    padding: 80px 18px 100px;
+  }
+
+  .leaflet-footer {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
+
+/* ---- Surface-specific inheritance ----
+ * DS components inherit currentColor; these are the few places the page needs
+ * a different value than the surface default.
+ */
+
+.leaflet-product-copy .lngr-overline {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.leaflet-effects .lngr-heading__title {
+  color: var(--lngr-blue-deep);
+}
+
+.leaflet-enrollment-copy > p {
+  max-width: 600px;
+  margin: 36px 0 0;
+  color: rgba(255, 255, 255, 0.67);
+  line-height: 1.5;
+}
+
+.leaflet-quote {
+  min-height: 78dvh;
+  color: var(--lngr-blue-deep);
+}
+
+/* ---- Treatment selection (staged for multi-flavor launch) ---- */
+
+.leaflet-options {
+  padding: 130px clamp(20px, 5vw, 80px) 150px;
+}
+
+.leaflet-options > header,
+.leaflet-treatments {
+  width: min(1320px, 100%);
+  margin-inline: auto;
+}
+
+.leaflet-options > header {
+  margin-bottom: 70px;
+}
+
+.leaflet-treatments {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.leaflet-treatments .lngr-treatment {
+  min-height: 620px;
+}
+
+@media (max-width: 980px) {
+  .leaflet-treatments {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Brand lockup sizing (the DS ships the asset unsized on purpose). */
+.leaflet-header .lngr-wordmark__image {
+  --lngr-wordmark-width: 250px;
+}
+
+.leaflet-footer-mark .lngr-wordmark__image {
+  --lngr-wordmark-width: 225px;
+}
+
+/* The header cross-reference is set uppercase here, unlike body secondaries. */
+.leaflet-header .lngr-btn--secondary {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (max-width: 650px) {
+  .leaflet-header .lngr-wordmark__image {
+    --lngr-wordmark-width: 190px;
+  }
+
+  .leaflet-header .lngr-btn--secondary {
+    max-width: 150px;
+    font-size: 0.67rem;
+    text-align: right;
+  }
+}

@@ -1,0 +1,49 @@
+/* Root surface. Every Longer composition sits inside .lngr-root. */
+
+.lngr-root {
+  box-sizing: border-box;
+  background: var(--lngr-paper);
+  color: var(--lngr-ink);
+  font-family: var(--lngr-font-sans);
+  font-size: var(--lngr-text-md);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.lngr-root *,
+.lngr-root *::before,
+.lngr-root *::after {
+  box-sizing: border-box;
+}
+
+.lngr-root a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lngr-root :focus-visible {
+  outline: 3px solid var(--lngr-red);
+  outline-offset: 4px;
+}
+
+/* Surface tones. Sections invert against each other the way a patient
+ * leaflet alternates printed panels. */
+.lngr-tone-paper {
+  background: var(--lngr-paper);
+  color: var(--lngr-ink);
+}
+
+.lngr-tone-white {
+  background: var(--lngr-white);
+  color: var(--lngr-blue-deep);
+}
+
+.lngr-tone-blue {
+  background: var(--lngr-blue);
+  color: var(--lngr-white);
+}
+
+.lngr-tone-deep {
+  background: var(--lngr-blue-black);
+  color: var(--lngr-white);
+}

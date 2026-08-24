@@ -1,0 +1,13 @@
+{
+  "name": "longer",
+  "private": true,
+  "packageManager": "pnpm@10.15.1",
+  "scripts": {
+    "dev": "pnpm --filter longer-store dev",
+    "build": "pnpm --filter @longer/ds build && pnpm --filter longer-store build",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
